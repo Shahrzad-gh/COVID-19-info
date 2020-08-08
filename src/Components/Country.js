@@ -17,7 +17,7 @@ export class Country extends Component {
                 <div className="col-md-6 text-center">
                     <div className="card card-body border-warning p-2">
                         <h4><strong>Worldwide</strong></h4>
-                        <p>1,345,673</p>
+                        <p>?</p>
                         <p>last Update:</p>
                         {data[0].lastUpdate}
                     </div>
