@@ -7,27 +7,31 @@ export class Country extends Component {
         const {data} = this.props;
         return (
             <div className="container">
-            <h4 className="text-center mb-5">COVID-19 Info</h4>
-            <div className="row">
+            <div className="row mt-5">
                 <div className="col-md-6 text-center">
                     <div className="card card-body border-warning p-2">
                         <h4><strong>{data[0].country}</strong></h4>
+                        <p>last Update: {data[0].lastUpdate}</p>
+                    </div>
+                </div>
+                <div className="col-md-6 text-center">
+                    <div className="card card-body border-warning p-2">
+                        <h4><strong>Worldwide</strong></h4>
+                        <p>1,345,673</p>
                         <p>last Update:</p>
                         {data[0].lastUpdate}
                     </div>
                 </div>
-                <div className="col-md-6">
-                            <ul className="list-group">
-                                <li className="list-group-item p-1">
+                <div className="row text-center m-2 col-md-6">
+                                <div className="card shadow mr-1 col-md-4 p-2">
                                     <h5 className="card-item">Confirmed: {data[0].confirmed}</h5>
-                                </li>
-                                <li className="list-group-item p-1">
-                                    <h5>Death: {data[0].deaths}</h5>
-                                </li>
-                                <li className="list-group-item p-1">
-                                    <h5>Recovered: {data[0].recovered}</h5>
-                                </li>    
-                            </ul>
+                                </div>
+                                <div className="card shadow mr-1 col-md-3 p-2">
+                                    <h5 className="card-item">Death: {data[0].deaths}</h5>
+                                </div>
+                                <div className="card shadow mr-1 col-md-4 p-2">
+                                    <h5 className="card-item">Recovered: {data[0].recovered}</h5>
+                                </div>    
                         </div>
                     </div>
                     </div>
